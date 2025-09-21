@@ -24,7 +24,7 @@ A fun and interactive web project that simulates the classic bouncing DVD logo a
 
 1. Clone the repository:  
    ```bash
-   git clone https://github.com/ZayanMuhammed/cool-dvd-animation/tree/main
+   git clone https://github.com/ZayanMuhammed/cool-dvd-animation
    ```
 
 ## authors
