@@ -5,7 +5,7 @@
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
 ![MIT License](https://img.shields.io/badge/License-MIT-green?style=flat-square)
 
-![DVD Animation Preview](https://tenor.com/bsOdq.gif)
+<img width="1282" height="540" alt="image" src="https://github.com/user-attachments/assets/f8523c9a-3192-495a-bfb2-5b2e1e0984cd" />
 
 
 A fun and interactive web project that simulates the classic bouncing DVD logo animation. Users can add multiple DVD logos, remove them, and watch them bounce dynamically. The project also supports customizing logos and colors for a lively experience.
