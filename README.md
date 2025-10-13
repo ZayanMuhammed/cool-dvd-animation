@@ -38,6 +38,15 @@ A fun and interactive web project that simulates the classic bouncing DVD logo a
    git clone https://github.com/ZayanMuhammed/cool-dvd-animation
    ```
 
+## Customization
+
+1. Change this line:
+```bash
+function changeDvdImage(el) {
+    el.src = `dvds/${getRandomInt(8)}.png`; //example 0 to 8
+}
+```
+
 ## authors
 
 - name: Zayan Muhammed
