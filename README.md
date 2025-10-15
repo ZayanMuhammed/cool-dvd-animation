@@ -50,7 +50,9 @@ A fun and interactive web project that simulates the classic bouncing DVD logo a
 
 ## Customization
 
-1. Change this line:
+1. Add a image (185, 115) in the dvds folder
+
+2. Change this line:
 ```bash
 function changeDvdImage(el) {
     el.src = `dvds/${getRandomInt(8)}.png`; //example 0 to 8
