@@ -16,7 +16,6 @@
 </div>
 </p>
 
-<img width="1282" height="540" alt="image" src="https://github.com/user-attachments/assets/f8523c9a-3192-495a-bfb2-5b2e1e0984cd" />
 
 
 A fun and interactive web project that simulates the classic bouncing DVD logo animation. Users can add multiple DVD logos, remove them, and watch them bounce dynamically. The project also supports customizing logos and colors for a lively experience. Multipaper mode enable
