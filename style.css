@@ -56,15 +56,15 @@ body {
 
 #dvdLogo {
     position: absolute;
-    width: 80px;
-    height: 50px;
+    width: 100px;
+    height: 90px;
     top: 0;
     left: 0;
 }
 
-img {
-    width: 90px;
-    height: 50px;
+.img {
+    width: 585px;
+    height: 515px;
 }
 
 .bin {
@@ -150,6 +150,43 @@ img {
     background-color: rgba(122, 237, 77, 0.08);
     border-radius: 1.25em;
 }
-.add:hover{
+
+.add:hover {
     background-color: rgba(122, 237, 77, 0.178);
+}
+
+@font-face {
+    font-family: 'InkFree';
+    src: url('fonts/Inkfree.ttf') format('truetype');
+}
+
+.player-count {
+    font-family: 'InkFree';
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+
+.player {
+    position: fixed;
+    width: 100px;
+    height: 90px;
+
+    top: 20px;
+    left: 20px;
+    pointer-events: none;
+
+    transform: translate(-50%, -50%);
+
+}
+
+.zayan {
+    font-family: "InkFree";
+    color: white;
+    position: fixed;
+    bottom: 0;
+    right: 20px;
+
 }

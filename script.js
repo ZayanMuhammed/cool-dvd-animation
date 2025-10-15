@@ -1,6 +1,8 @@
-// script.js
-const dvd = document.getElementById("dvdLogo");
+const socket = io();
 const container = document.getElementById("container");
+const playerCount = document.getElementById("player-count");
+const me = document.getElementById("dvdplayer");
+const dvd = document.getElementById("dvdLogo");
 const btn = document.getElementById("add");
 const rbtn = document.getElementById("bin");
 
@@ -14,7 +16,7 @@ function getRandomInt(max) {
 }
 
 function changeDvdImage(el) {
-    el.src = `dvds/${getRandomInt(8)}.png`;
+    el.src = `dvds/${getRandomInt(7)}.png`;
 }
 
 function moveDvd() {
@@ -88,3 +90,57 @@ rbtn.addEventListener("click", function () {
     clones.forEach(c => c.remove());
     clones.length = 0; // clear array
 });
+
+const others = {};
+let x = 100, y = 100, mx = 0, my = 0;
+const speed = 0.08;
+
+window.addEventListener("click", function () {
+    changeDvdImage(me);
+})
+
+socket.on("online", c => playerCount.textContent = "Players: " + c);
+
+socket.on("init", (all) => {
+    for (let id in all) if (id !== socket.id) addPlayer(id, all[id]);
+});
+
+socket.on("newPlayer", d => addPlayer(d.id, d));
+socket.on("update", d => movePlayer(d));
+socket.on("remove", id => removePlayer(id));
+
+function addPlayer(id, pos) {
+    const el = document.createElement("img");
+    el.src = `dvds/${Math.floor(Math.random() * 7)}.png`;
+    el.style = "position:absolute;width:80px;height:80px;";
+    container.appendChild(el);
+    el.style.left = pos.x + "px";
+    el.style.top = pos.y + "px";
+    others[id] = el;
+}
+
+function movePlayer(d) {
+    if (others[d.id]) {
+        others[d.id].style.left = d.x + "px";
+        others[d.id].style.top = d.y + "px";
+    }
+}
+
+function removePlayer(id) {
+    if (others[id]) {
+        others[id].remove();
+        delete others[id];
+    }
+}
+
+document.addEventListener("mousemove", e => { mx = e.clientX; my = e.clientY; });
+
+function loop() {
+    x += (mx - x) * speed;
+    y += (my - y) * speed;
+    me.style.left = x + "px";
+    me.style.top = y + "px";
+    socket.emit("move", { x, y });
+    requestAnimationFrame(loop);
+}
+loop();

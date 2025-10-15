@@ -19,7 +19,7 @@
 <img width="1282" height="540" alt="image" src="https://github.com/user-attachments/assets/f8523c9a-3192-495a-bfb2-5b2e1e0984cd" />
 
 
-A fun and interactive web project that simulates the classic bouncing DVD logo animation. Users can add multiple DVD logos, remove them, and watch them bounce dynamically. The project also supports customizing logos and colors for a lively experience.
+A fun and interactive web project that simulates the classic bouncing DVD logo animation. Users can add multiple DVD logos, remove them, and watch them bounce dynamically. The project also supports customizing logos and colors for a lively experience. Multipaper mode enable
 
 ## Features
 
@@ -29,6 +29,7 @@ A fun and interactive web project that simulates the classic bouncing DVD logo a
 - Customizable logos with transparent background.
 - Supports multiple colors for logos.
 - Clean and responsive design.
+- multiplayer support
 
 
 ## Installation
@@ -37,6 +38,16 @@ A fun and interactive web project that simulates the classic bouncing DVD logo a
    ```bash
    git clone https://github.com/ZayanMuhammed/cool-dvd-animation
    ```
+
+2. install packages
+```bash
+    npm install
+```
+
+3. Run server.js
+```bash
+    node server.js
+```
 
 ## Customization
 

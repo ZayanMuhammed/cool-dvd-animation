@@ -1,0 +1,31 @@
+{
+  "name": "cool-dvd-animation",
+  "version": "1.0.0",
+  "description": "A fun and interactive web project that simulates the classic bouncing DVD logo animation. Users can add multiple DVD logos, remove them, and watch them bounce dynamically. The project also supports customizing logos and colors for a lively experience.",
+  "keywords": [
+    "dvd"
+  ],
+  "homepage": "https://github.com/ZayanMuhammed/cool-dvd-animation#readme",
+  "bugs": {
+    "url": "https://github.com/ZayanMuhammed/cool-dvd-animation/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZayanMuhammed/cool-dvd-animation.git"
+  },
+  "license": "MIT",
+  "author": "Zayan Muhammed",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "chalk": "^5.6.2",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "socket.io": "^4.8.1",
+    "socket.io-client": "^4.8.1"
+  }
+}

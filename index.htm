@@ -1,17 +1,24 @@
 <!DOCTYPE html>
 
 <head>
-    <title>dvd animation</title>
+    <title>dvd party</title>
+    <link rel="icon" type="image/x-icon" href="dvds/1.png">
+    <script src="./node_modules/socket.io-client/dist/socket.io.min.js"></script>
     <script src="./script.js" defer></script>
     <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
+    <h5 class="zayan">Made by: Zayan Muhammed</h5>
+    <h5 id="player-count" class="player-count">Players: 0</h5>
     <input type="file" id="file-upload" hidden>
     <div id="container">
         <div id="">
-            <img src="dvds/0.png" id="dvdLogo">
+            <img src="dvds/0.png" id="dvdLogo" class="img">
         </div>
+    </div>
+    <div id="">
+        <img src="dvds/0.png" id="dvdplayer" class="player" alt="Player">
     </div>
     <!-- bin -->
     <button class="bin" id="bin">
